@@ -1,15 +1,14 @@
 angular.module("ngDraggableDroppable")
-	.directive("hnDraggable", ["$parse", "$injector", "$document", hnDraggable])
-	.directive("hnDroppable", ["$injector", hnDroppable]);
+	.directive("ngDraggable", ["$parse", "$injector", "$document", ngDraggable])
+	.directive("ngDroppable", ["$injector", ngDroppable]);
 
 
-function hnDraggable($parse, $injector, $document) {
+function ngDraggable($parse, $injector, $document) {
 	return {
 		restrict: "A",
 		scope: {
 			payload: "=",
 			nestedPayload: "=",
-			elementSelector: "@",
 			onDragStart: "&",
 			onDragOverElement: "&",
 			onDragComplete: "&",
@@ -84,7 +83,7 @@ function hnDraggable($parse, $injector, $document) {
 	};
 }
 
-function hnDroppable($injector) {
+function ngDroppable($injector) {
 	return {
 		restrict: "A",
 		scope: {
