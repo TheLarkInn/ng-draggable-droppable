@@ -95,7 +95,6 @@ function ngDroppable($injector) {
 				dragDirection;
 
 			$(lElement).attr("dropzone", 'link payload');
-			$(lElement).attr("title", "Drop Category Here");
 			$(lElement).addClass("droppable");
 
 			lElement.on("dragover", function(event) {
